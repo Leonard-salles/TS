@@ -97,3 +97,35 @@ function showDogDetails(dog: Dog){
 showDogDetails(turca)
 showDogDetails(bob)
 
+// desafio de norrowing
+
+// 1 - criaruma função que recebe o review dos usuarios, precisamos de norrowingpra receber os dados
+// 2 - As possibilidades são boolean e number
+// 3 - serão enviados números de 1 a 5 (estrelas), prever uma mensagem para cada nota
+// 4 - false, que é quando um usuario não deixa uma review, prever um retorno pra ele também
+
+function review(nota?: boolean | number){
+    if(!nota){
+        console.log("Parece que houve um erro durante a avaliação")
+    }else{
+
+        if(typeof nota === "boolean"){
+            console.log("Mesmo não dando uma nota agradecemos por usar nosso sistema.  :)")
+        }else{
+            if(nota <= 2){
+                console.log(`Você nos deu ${nota} estrelas. Significa que nosso trabalo foi ruim. Obrigado pelo feedback`)
+            }else if(nota <= 4){
+                console.log(`Você nos deu ${nota} estrelas. Significa que nosso trabalho foi bom. Obrigado pelo feedback`)
+            }else{
+                console.log(`Você nos deu ${nota} estrelas. Significa que nosso trabalho foi Excelente. Obrigado pelo feedback`)
+                
+            }
+        }
+    }
+}
+
+review()
+review(false)
+review(2)
+review(3)
+review(5)
