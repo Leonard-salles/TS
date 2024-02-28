@@ -92,3 +92,41 @@ showBalance(105)
 showBalance("800")
 
 const arr2: Array<number | string | boolean> = [1, true, "teste"]
+
+
+// 15 - literal type
+
+let teste : "testando"
+
+teste = "testando"
+
+console.log(teste)
+
+function showDirection(direction: "left" | "right" | "center"): void{
+     console.log(`a direção é ${direction}`)
+}
+
+showDirection("left")
+
+// 16 - Non null assertion Operation
+
+// 17 - bigInt
+
+let n: bigint
+
+// n = 1
+
+n = 1000n
+
+console.log(n)
+console.log(typeof n)
+
+console.log(100n + n)
+
+// 18 - symbol
+
+let symbolA:symbol = Symbol("a")
+let symbolB:symbol = Symbol("a")
+
+console.log(symbolA === symbolB)
+console.log(symbolA == symbolB)

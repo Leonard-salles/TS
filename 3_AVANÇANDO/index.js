@@ -61,3 +61,24 @@ function showBalance(balance) {
 showBalance(105);
 showBalance("800");
 const arr2 = [1, true, "teste"];
+// 15 - literal type
+let teste;
+teste = "testando";
+console.log(teste);
+function showDirection(direction) {
+    console.log(`a direção é ${direction}`);
+}
+showDirection("left");
+// 16 - Non null assertion Operation
+// 17 - bigInt
+let n;
+// n = 1
+n = 1000n;
+console.log(n);
+console.log(typeof n);
+console.log(100n + n);
+// 18 - symbol
+let symbolA = Symbol("a");
+let symbolB = Symbol("a");
+console.log(symbolA === symbolB);
+console.log(symbolA == symbolB);
